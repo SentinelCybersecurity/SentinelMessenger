@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="AppProtectionPreferenceFragment_instant">Ngay tức thì</string>
+  <string name="BlockUnblockDialog_block_and_delete">Chặn và Xoá</string>
+  <string name="prompt_passphrase_activity__sentinel_is_locked">Sentinel đã khoá</string>
+</resources>
