@@ -2,14 +2,14 @@
 <resources>
   <color name="debuglog_light_none">@color/core_black</color>
   <color name="debuglog_light_verbose">#515151</color>
-  <color name="debuglog_light_debug">#1B8C1B</color>
-  <color name="debuglog_light_info">#177717</color>
-  <color name="debuglog_light_warn">#23B522</color>
-  <color name="debuglog_light_error">#0C3D0C</color>
+  <color name="debuglog_light_debug">#009047</color>
+  <color name="debuglog_light_info">#007A3D</color>
+  <color name="debuglog_light_warn">#00B95C</color>
+  <color name="debuglog_light_error">#003F1F</color>
   <color name="debuglog_dark_none">@color/core_white</color>
   <color name="debuglog_dark_verbose">#8A8A8A</color>
-  <color name="debuglog_dark_debug">#24B823</color>
-  <color name="debuglog_dark_info">#28CE27</color>
-  <color name="debuglog_dark_warn">#30FB2F</color>
-  <color name="debuglog_dark_error">#23B322</color>
+  <color name="debuglog_dark_debug">#00BD5E</color>
+  <color name="debuglog_dark_info">#00D469</color>
+  <color name="debuglog_dark_warn">#00FF80</color>
+  <color name="debuglog_dark_error">#00B85B</color>
 </resources>

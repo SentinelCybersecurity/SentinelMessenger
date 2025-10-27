@@ -23,19 +23,19 @@
   <color name="signal_colorErrorInverse">@color/sentinel_error_light</color>
   <color name="signal_colorErrorContainerInverse">@color/sentinel_error_container_light</color>
   <!-- Core color alpha variants -->
-  <color name="signal_colorSecondaryContainer_12">#1F115710</color>
-  <color name="signal_colorTertiaryContainer_12">#1F0F4E0F</color>
-  <color name="signal_colorSurface_60">#99041504</color>
-  <color name="signal_colorSurfaceVariant_38">#610C3E0C</color>
-  <color name="signal_colorSurfaceVariant_64">#A30C3E0C</color>
-  <color name="signal_colorOnSurface_12">#1F36FF35</color>
-  <color name="signal_colorOnSurface_50">#8036FF35</color>
-  <color name="signal_colorOnSurfaceVariant_60">#992EEE2D</color>
-  <color name="signal_colorOnBackground_60">#9936FF35</color>
-  <color name="signal_colorOutline_38">#61187A17</color>
-  <color name="signal_colorOutlineVariant_38">#61187A17</color>
-  <color name="signal_colorBackground_0">#00041504</color>
+  <color name="signal_colorSecondaryContainer_12">#1F00592C</color>
+  <color name="signal_colorTertiaryContainer_12">#1F005028</color>
+  <color name="signal_colorSurface_60">#99101010</color>
+  <color name="signal_colorSurfaceVariant_38">#61004020</color>
+  <color name="signal_colorSurfaceVariant_64">#A3004020</color>
+  <color name="signal_colorOnSurface_12">#1F00FF8E</color>
+  <color name="signal_colorOnSurface_50">#8000FF8E</color>
+  <color name="signal_colorOnSurfaceVariant_60">#9900F479</color>
+  <color name="signal_colorOnBackground_60">#9900FF8E</color>
+  <color name="signal_colorOutline_38">#61007D3E</color>
+  <color name="signal_colorOutlineVariant_38">#61007D3E</color>
+  <color name="signal_colorBackground_0">#00101010</color>
   <!-- Core color alpha variants without alpha channel -->
-  <color name="signal_colorSurfaceVariant_16_no_alpha">#115610</color>
-  <color name="signal_colorSurfaceVariant_32_no_alpha">#187A17</color>
+  <color name="signal_colorSurfaceVariant_16_no_alpha">#00582C</color>
+  <color name="signal_colorSurfaceVariant_32_no_alpha">#007D3E</color>
 </resources>

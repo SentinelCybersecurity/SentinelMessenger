@@ -146,7 +146,7 @@
   <!-- <color name="react_with_any_search_hint">?attr/colorOnSurfaceVariant</color> -->
   <!-- <color name="react_with_any_customize_background">?attr/colorSurfaceVariant</color> -->
   <!-- <color name="voice_note_player_view_background">?attr/colorSurfaceContainerLow</color> -->
-  <color name="num_pad_key_background">#35FF34</color>
+  <color name="num_pad_key_background">#00FF8C</color>
   <color name="top_toast_background_color">@color/core_white</color>
   <color name="sent_gift_button_tint">@color/transparent_white_70</color>
   <color name="recv_gift_button_tint">@color/transparent_white_80</color>
