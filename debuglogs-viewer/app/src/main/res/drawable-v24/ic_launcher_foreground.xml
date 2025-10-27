@@ -10,12 +10,12 @@
       android:pathData="M0,0h484.54v483.83h-484.54z" />
 
   <group
-      android:scaleX="0.6"
-      android:scaleY="0.6"
-      android:translateX="96.90"
-      android:translateY="96.90">
-      <path
-      android:pathData="M353.55 483.83L283.73 411.88 360.8 124.09 83.61 399.86 100.78 230.35 0 129.57 484.54 0 353.55 483.83Z"
-      android:fillColor="#000000" />
+      android:scaleX="0.4"
+      android:scaleY="0.4"
+      android:translateX="145.36"
+      android:translateY="145.36">
+    <path
+    android:pathData="M353.55 483.83L283.73 411.88 360.8 124.09 83.61 399.86 100.78 230.35 0 129.57 484.54 0 353.55 483.83Z"
+    android:fillColor="#000000" />
   </group>
 </vector>

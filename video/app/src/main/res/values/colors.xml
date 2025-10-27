@@ -9,6 +9,6 @@
   <color name="purple_700">#062006</color>
   <color name="teal_200">#2AD929</color>
   <color name="teal_700">#1B8A1A</color>
-  <color name="black">#FF000000</color>
-  <color name="white">#FFFFFFFF</color>
+  <color name="black">#000000</color>
+  <color name="white">#FFFFFF</color>
 </resources>

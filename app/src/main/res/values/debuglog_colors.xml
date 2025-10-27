@@ -7,7 +7,7 @@
   <color name="debuglog_light_warn">#23B522</color>
   <color name="debuglog_light_error">#0C3D0C</color>
   <color name="debuglog_dark_none">@color/core_white</color>
-  <color name="debuglog_dark_verbose">#8a8a8a</color>
+  <color name="debuglog_dark_verbose">#8A8A8A</color>
   <color name="debuglog_dark_debug">#24B823</color>
   <color name="debuglog_dark_info">#28CE27</color>
   <color name="debuglog_dark_warn">#30FB2F</color>
