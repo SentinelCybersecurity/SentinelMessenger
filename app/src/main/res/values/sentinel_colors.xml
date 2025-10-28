@@ -9,13 +9,13 @@
   <color name="stock_on_primary_light">#FFFFFF</color>
   <color name="sentinel_primary_container_light">#00F178</color>
   <color name="stock_primary_container_light">#00FF8C</color>
-  <color name="sentinel_on_primary_container_light">#141414</color>
+  <color name="sentinel_on_primary_container_light">#001B0D</color>
   <color name="stock_on_primary_container_light">#001F0F</color>
   <color name="sentinel_primary_fixed">#00F178</color>
   <color name="stock_primary_fixed">#00FF8C</color>
   <color name="sentinel_primary_fixed_dim">#00D56A</color>
   <color name="stock_primary_fixed_dim">#00FD7E</color>
-  <color name="sentinel_on_primary_fixed">#141414</color>
+  <color name="sentinel_on_primary_fixed">#001B0D</color>
   <color name="stock_on_primary_fixed">#001F0F</color>
   <color name="sentinel_on_primary_fixed_variant">#00572B</color>
   <color name="stock_on_primary_fixed_variant">#4B4B4B</color>
@@ -89,10 +89,10 @@
   <color name="sentinel_tertiary_light">#00743A</color>
   <color name="sentinel_on_tertiary_light">#FFFFFF</color>
   <color name="sentinel_tertiary_container_light">#00FF81</color>
-  <color name="sentinel_on_tertiary_container_light">#141414</color>
+  <color name="sentinel_on_tertiary_container_light">#001B0D</color>
   <color name="sentinel_tertiary_fixed">#00FF91</color>
   <color name="sentinel_tertiary_fixed_dim">#00743A</color>
-  <color name="sentinel_on_tertiary_fixed">#141414</color>
+  <color name="sentinel_on_tertiary_fixed">#001B0D</color>
   <color name="sentinel_on_tertiary_fixed_variant">#005028</color>
   <!-- material3_colors_dark.xml -->
   <color name="sentinel_primary_inverse_dark">#006030</color>
