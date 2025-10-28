@@ -18,9 +18,9 @@
   <color name="sentinel_on_primary_fixed">#141414</color>
   <color name="stock_on_primary_fixed">#001F0F</color>
   <color name="sentinel_on_primary_fixed_variant">#00572B</color>
-  <color name="stock_on_primary_fixed_variant">#006432</color>
+  <color name="stock_on_primary_fixed_variant">#4B4B4B</color>
   <color name="sentinel_secondary_light">#00FA7C</color>
-  <color name="stock_secondary_light">#00803F</color>
+  <color name="stock_secondary_light">#606060</color>
   <color name="sentinel_on_secondary_light">#FFFFFF</color>
   <color name="stock_on_secondary_light">#FFFFFF</color>
   <color name="sentinel_secondary_container_light">#00FF8C</color>
@@ -28,57 +28,57 @@
   <color name="stock_secondary_container_light">#00FF90</color>
   <!-- Variant of #DCE1F9 -->
   <color name="sentinel_on_secondary_container_light">#002412</color>
-  <color name="stock_on_secondary_container_light">#002513</color>
+  <color name="stock_on_secondary_container_light">#1C1C1C</color>
   <color name="sentinel_secondary_fixed">#00FF8C</color>
   <color name="stock_secondary_fixed">#00FF8E</color>
   <color name="sentinel_secondary_fixed_dim">#00FA7C</color>
   <!-- <color name="stock_secondary_fixed_dim">#C1C6DD</color> -->
   <!-- Conflicts with stock_secondary_dark -->
   <color name="sentinel_on_secondary_fixed">#002412</color>
-  <color name="stock_on_secondary_fixed">#002513</color>
+  <color name="stock_on_secondary_fixed">#1C1C1C</color>
   <color name="sentinel_on_secondary_fixed_variant">#00592C</color>
-  <color name="stock_on_secondary_fixed_variant">#005D2E</color>
+  <color name="stock_on_secondary_fixed_variant">#464646</color>
   <color name="sentinel_surface_inverse_light">#003D1E</color>
-  <color name="stock_surface_inverse_light">#004522</color>
-  <color name="sentinel_surface_variant_light">#00FF91</color>
-  <color name="stock_surface_variant_light">#00FF91</color>
-  <color name="sentinel_surface_light">#00FF92</color>
-  <color name="stock_surface_light">#00FF92</color>
-  <color name="sentinel_background_light">#00FF92</color>
-  <color name="stock_background_light">#00FF92</color>
+  <color name="stock_surface_inverse_light">#343434</color>
+  <color name="sentinel_surface_variant_light">#E7E7E7</color>
+  <color name="stock_surface_variant_light">#EBEBEB</color>
+  <color name="sentinel_surface_light">#F7F7F7</color>
+  <color name="stock_surface_light">#FCFCFC</color>
+  <color name="sentinel_background_light">#F7F7F7</color>
+  <color name="stock_background_light">#FCFCFC</color>
   <color name="sentinel_surface_dim_light">#00FF8A</color>
-  <color name="stock_surface_dim_light">#00FF91</color>
+  <color name="stock_surface_dim_light">#E7E7E7</color>
   <!-- Previously signal_light_colorSurface5 -->
   <color name="sentinel_surface_container_highest_light">#00FF8E</color>
-  <color name="stock_surface_container_highest_light">#00FF91</color>
+  <color name="stock_surface_container_highest_light">#EAEAEA</color>
   <!-- Previously signal_light_colorSurface4 -->
   <color name="sentinel_surface_container_high_light">#00FF91</color>
-  <color name="stock_surface_container_high_light">#00FF91</color>
+  <color name="stock_surface_container_high_light">#ECECEC</color>
   <!-- Previously signal_light_colorSurface3 -->
-  <color name="sentinel_surface_container_light">#00FF91</color>
-  <color name="stock_surface_container_light">#00FF91</color>
+  <color name="sentinel_surface_container_light">#ECECEC</color>
+  <color name="stock_surface_container_light">#F0F0F0</color>
   <!-- Previously signal_light_colorSurface2 -->
-  <color name="sentinel_surface_container_low_light">#00FF92</color>
-  <color name="stock_surface_container_low_light">#00FF92</color>
+  <color name="sentinel_surface_container_low_light">#F2F2F2</color>
+  <color name="stock_surface_container_low_light">#F5F5F5</color>
   <!-- Previously signal_light_colorSurface1 -->
-  <color name="sentinel_surface_bright_light">#00FF92</color>
-  <color name="stock_surface_bright_light">#00FF92</color>
-  <color name="sentinel_surface_container_lowest_light">#00FF92</color>
-  <color name="sentinel_on_surface_inverse_light">#00FF91</color>
+  <color name="sentinel_surface_bright_light">#F7F7F7</color>
+  <color name="stock_surface_bright_light">#FCFCFC</color>
+  <color name="sentinel_surface_container_lowest_light">#F9F9F9</color>
+  <color name="sentinel_on_surface_inverse_light">#EFEFEF</color>
   <!-- <color name="stock_on_surface_inverse_light">#EDF0F6</color> -->
   <!-- Conflicts with stock_surface_container_light -->
-  <color name="sentinel_on_surface_light">#001F0F</color>
+  <color name="sentinel_on_surface_light">#171717</color>
   <!-- Variant of #171719 -->
-  <color name="stock_on_surface_light">#002412</color>
+  <color name="stock_on_surface_light">#1B1B1B</color>
   <!-- Different from stock_on_background_light #1B1D1D but it should be the same -->
-  <color name="sentinel_on_background_light">#001F0F</color>
-  <color name="stock_on_background_light">#002713</color>
-  <color name="sentinel_on_surface_variant_light">#00743A</color>
-  <color name="stock_on_surface_variant_light">#00753A</color>
-  <color name="sentinel_outline_light">#00AC55</color>
-  <color name="stock_outline_light">#00AE57</color>
+  <color name="sentinel_on_background_light">#171717</color>
+  <color name="stock_on_background_light">#1D1D1D</color>
+  <color name="sentinel_on_surface_variant_light">#575757</color>
+  <color name="stock_on_surface_variant_light">#585858</color>
+  <color name="sentinel_outline_light">#818181</color>
+  <color name="stock_outline_light">#838383</color>
   <color name="sentinel_outline_variant_light">#00BD5E</color>
-  <color name="stock_outline_variant_light">#00F57A</color>
+  <color name="stock_outline_variant_light">#BFBFBF</color>
   <!-- Previously signal_light_colorOnSurfaceVariant1 -->
   <color name="sentinel_error_light">#004824</color>
   <color name="stock_error_light">#005128</color>
@@ -102,56 +102,56 @@
   <color name="sentinel_on_primary_dark">#002814</color>
   <color name="stock_on_primary_dark">#003018</color>
   <color name="sentinel_primary_container_dark">#00572B</color>
-  <color name="stock_primary_container_dark">#006432</color>
+  <color name="stock_primary_container_dark">#4B4B4B</color>
   <color name="sentinel_on_primary_container_dark">#00FF8C</color>
   <color name="stock_on_primary_container_dark">#00FF8E</color>
-  <color name="sentinel_secondary_dark">#00FE7E</color>
+  <color name="sentinel_secondary_dark">#C7C7C7</color>
   <color name="stock_secondary_dark">#00FE7E</color>
-  <color name="sentinel_on_secondary_dark">#003C1E</color>
-  <color name="stock_on_secondary_dark">#004020</color>
+  <color name="sentinel_on_secondary_dark">#2D2D2D</color>
+  <color name="stock_on_secondary_dark">#303030</color>
   <color name="sentinel_secondary_container_dark">#00592C</color>
-  <color name="stock_secondary_container_dark">#005D2E</color>
+  <color name="stock_secondary_container_dark">#464646</color>
   <color name="sentinel_on_secondary_container_dark">#00FF8C</color>
   <color name="stock_on_secondary_container_dark">#00FF8E</color>
   <color name="sentinel_surface_inverse_dark">#00FF8E</color>
-  <color name="stock_surface_inverse_dark">#00FF91</color>
-  <color name="sentinel_surface_variant_dark">#004020</color>
-  <color name="stock_surface_variant_dark">#004120</color>
+  <color name="stock_surface_inverse_dark">#EAEAEA</color>
+  <color name="sentinel_surface_variant_dark">#303030</color>
+  <color name="stock_surface_variant_dark">#313131</color>
   <color name="sentinel_surface_dark">#101010</color>
-  <color name="stock_surface_dark">#002513</color>
+  <color name="stock_surface_dark">#1C1C1C</color>
   <color name="sentinel_background_dark">#101010</color>
-  <color name="stock_background_dark">#002513</color>
+  <color name="stock_background_dark">#1C1C1C</color>
   <color name="sentinel_surface_bright_dark">#003D1E</color>
-  <color name="stock_surface_bright_dark">#004522</color>
+  <color name="stock_surface_bright_dark">#343434</color>
   <!-- Previously signal_dark_colorSurface5 -->
   <color name="sentinel_surface_container_highest_dark">#003018</color>
-  <color name="stock_surface_container_highest_dark">#004020</color>
+  <color name="stock_surface_container_highest_dark">#303030</color>
   <!-- Previously signal_dark_colorSurface4 -->
   <color name="sentinel_surface_container_high_dark">#002B15</color>
-  <color name="stock_surface_container_high_dark">#003F1F</color>
+  <color name="stock_surface_container_high_dark">#2F2F2F</color>
   <!-- Previously signal_dark_colorSurface3 -->
   <color name="sentinel_surface_container_dark">#002412</color>
-  <color name="stock_surface_container_dark">#00381C</color>
+  <color name="stock_surface_container_dark">#2A2A2A</color>
   <!-- Previously signal_dark_colorSurface2 -->
   <color name="sentinel_surface_container_low_dark">#001C0E</color>
-  <color name="stock_surface_container_low_dark">#003018</color>
+  <color name="stock_surface_container_low_dark">#242424</color>
   <!-- Previously signal_dark_colorSurface1 -->
   <color name="sentinel_surface_dim_dark">#101010</color>
-  <color name="stock_surface_dim_dark">#002513</color>
+  <color name="stock_surface_dim_dark">#1C1C1C</color>
   <color name="sentinel_surface_container_lowest_dark">#0B0B0B</color>
-  <color name="sentinel_on_surface_inverse_dark">#004120</color>
+  <color name="sentinel_on_surface_inverse_dark">#313131</color>
   <!-- <color name="stock_on_surface_inverse_dark">#31343E</color> -->
   <!-- Conflicts with stock_surface_bright_dark -->
-  <color name="sentinel_on_surface_dark">#00FF8E</color>
-  <color name="stock_on_surface_dark">#00FF8E</color>
-  <color name="sentinel_on_background_dark">#00FF8E</color>
-  <color name="stock_on_background_dark">#00FF8E</color>
-  <color name="sentinel_on_surface_variant_dark">#00F479</color>
-  <color name="stock_on_surface_variant_dark">#00F57A</color>
-  <color name="sentinel_outline_dark">#007D3E</color>
-  <color name="stock_outline_dark">#007D3E</color>
+  <color name="sentinel_on_surface_dark">#E2E2E2</color>
+  <color name="stock_on_surface_dark">#E2E2E2</color>
+  <color name="sentinel_on_background_dark">#E2E2E2</color>
+  <color name="stock_on_background_dark">#E2E2E2</color>
+  <color name="sentinel_on_surface_variant_dark">#BDBDBD</color>
+  <color name="stock_on_surface_variant_dark">#BFBFBF</color>
+  <color name="sentinel_outline_dark">#5E5E5E</color>
+  <color name="stock_outline_dark">#5E5E5E</color>
   <color name="sentinel_outline_variant_dark">#008944</color>
-  <color name="stock_outline_variant_dark">#006B35</color>
+  <color name="stock_outline_variant_dark">#505050</color>
   <!-- Previously signal_dark_colorOnSurfaceVariant1 -->
   <color name="sentinel_error_dark">#005329</color>
   <color name="stock_error_dark">#00F97C</color>
@@ -164,10 +164,10 @@
   <color name="sentinel_tertiary_container_dark">#005028</color>
   <color name="sentinel_on_tertiary_container_dark">#00FF91</color>
   <!-- material3_colors.xml -->
-  <color name="sentinel_surface_variant_16_no_alpha_light">#00FF83</color>
-  <color name="stock_surface_variant_16_no_alpha_light">#00FF88</color>
-  <color name="sentinel_surface_variant_32_no_alpha_light">#00EE76</color>
-  <color name="stock_surface_variant_32_no_alpha_light">#00F178</color>
+  <color name="sentinel_surface_variant_16_no_alpha_light">#D0D0D0</color>
+  <color name="stock_surface_variant_16_no_alpha_light">#D8D8D8</color>
+  <color name="sentinel_surface_variant_32_no_alpha_light">#B9B9B9</color>
+  <color name="stock_surface_variant_32_no_alpha_light">#BCBCBC</color>
   <!-- core_colors.xml -->
   <color name="sentinel_core_ultramarine">#008643</color>
   <color name="stock_core_ultramarine">#008944</color>
@@ -199,15 +199,15 @@
   <color name="stock_username_qr_code_blue_border">#009249</color>
   <color name="sentinel_username_qr_code_blue_foreground">#006331</color>
   <color name="stock_username_qr_code_blue_foreground">#006331</color>
-  <color name="sentinel_username_qr_code_blue_background">#00FF91</color>
-  <color name="stock_username_qr_code_blue_background">#00FF91</color>
+  <color name="sentinel_username_qr_code_blue_background">#F0F0F0</color>
+  <color name="stock_username_qr_code_blue_background">#F0F0F0</color>
   <!-- drawables/* -->
   <color name="sentinel_gradient_A_1">#00FF88</color>
   <color name="stock_gradient_A_1">#00FF88</color>
   <color name="sentinel_gradient_A_2">#00EE76</color>
   <color name="stock_gradient_A_2">#00F479</color>
-  <color name="sentinel_gradient_B_1">#00FF91</color>
-  <color name="stock_gradient_B_1">#00FF92</color>
+  <color name="sentinel_gradient_B_1">#EAEAEA</color>
+  <color name="stock_gradient_B_1">#F3F3F3</color>
   <color name="sentinel_gradient_B_2">#00FF8A</color>
   <color name="stock_gradient_B_2">#00FF91</color>
   <color name="sentinel_gradient_C_1">#007339</color>
@@ -242,9 +242,9 @@
   <color name="stock_other_11">#00DA6C</color>
   <color name="sentinel_other_12">#008944</color>
   <color name="stock_other_12">#008441</color>
-  <color name="sentinel_other_13">#00FF92</color>
+  <color name="sentinel_other_13">#F6F6F6</color>
   <!-- Variant of #F6F6FF -->
-  <color name="stock_other_13">#00FF92</color>
+  <color name="stock_other_13">#FCFCFC</color>
   <!-- Variant of #FBFCFF -->
   <color name="sentinel_other_14">#00753A</color>
   <color name="stock_other_14">#008843</color>

@@ -31,11 +31,11 @@
   <color name="transparent_white_80">#CCFFFFFF</color>
   <color name="transparent_white_87">#DFFFFFFF</color>
   <color name="transparent_white_90">#E6FFFFFF</color>
-  <color name="paypal_outline">#8000AC55</color>
+  <color name="paypal_outline">#80818181</color>
   <color name="conversation_compose_divider">#32000000</color>
   <color name="conversation_item_selected_system_ui">#4D4D4D</color>
   <color name="touch_highlight">#4000A552</color>
-  <color name="touch_highlight_material3">#1400FF8E</color>
+  <color name="touch_highlight_material3">#14E2E2E2</color>
   <color name="ConversationListTabs__unread">#008643</color>
   <color name="transparent">#00FFFFFF</color>
   <color name="transparent_black">#00000000</color>

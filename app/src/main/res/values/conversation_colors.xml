@@ -34,9 +34,9 @@
   <color name="conversation_taupe">#008944</color>
   <color name="conversation_taupe_tint">#00F077</color>
   <color name="conversation_taupe_shade">#007038</color>
-  <color name="conversation_steel">#009047</color>
-  <color name="conversation_steel_tint">#00F57A</color>
-  <color name="conversation_steel_shade">#00793C</color>
+  <color name="conversation_steel">#6C6C6C</color>
+  <color name="conversation_steel_tint">#BFBFBF</color>
+  <color name="conversation_steel_shade">#5B5B5B</color>
   <color name="conversation_ultramarine">#008643</color>
   <color name="conversation_ultramarine_tint">#00F57A</color>
   <color name="conversation_ultramarine_shade">#004F27</color>
