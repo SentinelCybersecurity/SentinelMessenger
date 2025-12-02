@@ -10,7 +10,7 @@ plugins {
 }
 
 val canonicalVersionCode = 1611
-val canonicalVersionName = "25.12.01" // alias: "25.11.22" // alias: "7.63.3"
+val canonicalVersionName = "25.12.02" // alias: "25.11.22" // alias: "7.63.3"
 val currentHotfixVersion = 0
 val maxHotfixVersions = 100
 val sentinelRevision = 1
