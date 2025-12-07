@@ -10,8 +10,8 @@
       android:pathData="M0,0h1024v1024h-1024z"/>
 
   <group
-      android:translateX="153.5"
-      android:translateY="1177.5"
+      android:translateX="153.6"
+      android:translateY="870.4"
       android:scaleX="0.07"
       android:scaleY="-0.07">
 
