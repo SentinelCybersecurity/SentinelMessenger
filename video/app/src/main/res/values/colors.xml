@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2023 Sentinel Messenger, LLC
+  ~ SPDX-License-Identifier: AGPL-3.0-only
+  -->
+<resources>
+  <color name="purple_200">#00CA65</color>
+  <color name="purple_500">#003319</color>
+  <color name="purple_700">#002111</color>
+  <color name="teal_200">#00DE6E</color>
+  <color name="teal_700">#008D46</color>
+  <color name="black">#000000</color>
+  <color name="white">#FFFFFF</color>
+</resources>
