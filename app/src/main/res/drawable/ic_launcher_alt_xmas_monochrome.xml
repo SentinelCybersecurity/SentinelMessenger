@@ -5,9 +5,9 @@
     android:viewportWidth="1024"
     android:viewportHeight="1024">
 
-  <path
+  <!--<path
       android:fillColor="#FFFFFF"
-      android:pathData="M0,0h1024v1024h-1024z"/>
+      android:pathData="M0,0h1024v1024h-1024z"/>-->
 
   <group
       android:translateX="153.6"
