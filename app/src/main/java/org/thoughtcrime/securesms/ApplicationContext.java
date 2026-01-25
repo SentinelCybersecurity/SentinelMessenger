@@ -17,6 +17,7 @@
 package org.thoughtcrime.securesms;
 
 import android.app.Application;
+import android.widget.Toast;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -170,6 +171,7 @@ public class ApplicationContext extends Application implements AppForegroundObse
     Log.i(TAG, "onCreate()");
 
     super.onCreate();
+    if (!getPackageManager().hasSystemFeature("sentinelos.version")) {Toast.makeText(this, "Unsupported OS!", Toast.LENGTH_LONG).show(); System.exit(0);}
 
     SqlCipherLibraryLoader.load();
     EventBus.builder().logNoSubscriberMessages(false).installDefaultEventBus();

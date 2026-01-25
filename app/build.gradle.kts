@@ -10,8 +10,8 @@ plugins {
   id("sentinel")
 }
 
-val canonicalVersionCode = 251228 // alias: 251227 // alias: 1633
-val canonicalVersionName = "25.12.28" // alias: "25.12.27" // alias: "7.68.5"
+val canonicalVersionCode = 260125 // alias: 260125 // alias: 1633
+val canonicalVersionName = "26.01.25" // alias: "26.01.25" // alias: "7.68.5"
 val currentHotfixVersion = 0
 val maxHotfixVersions = 100
 val sentinelRevision = 1
