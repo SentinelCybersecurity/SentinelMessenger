@@ -5,11 +5,15 @@ import android.net.Uri
 import android.os.Build
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.viewModelScope
 import im.molly.unifiedpush.UnifiedPushDistributor
+import im.molly.unifiedpush.components.settings.app.notifications.updateSentinelSocket
 import im.molly.unifiedpush.model.SentinelSocket
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.update
+import kotlinx.coroutines.launch
 import org.thoughtcrime.securesms.ApplicationContext
 import org.thoughtcrime.securesms.dependencies.AppDependencies
 import org.thoughtcrime.securesms.keyvalue.SettingsValues.NotificationDeliveryMethod
@@ -32,7 +36,11 @@ class NotificationsSettingsViewModel(private val sharedPreferences: SharedPrefer
       SignalStore.settings.isMessageVibrateEnabled = NotificationChannels.getInstance().messageVibrate
     }
 
-    store.update { getState(calculateSlowNotifications = true) }
+    // Calculating slow notification stuff isn't thread-safe, so we do it without to start off so we have most state populated, then fetch it in the background.
+    store.update { getState(calculateSlowNotifications = false) }
+    viewModelScope.launch(Dispatchers.IO) {
+      store.update { getState(calculateSlowNotifications = true) }
+    }
   }
 
   fun refresh() {
@@ -116,7 +124,7 @@ class NotificationsSettingsViewModel(private val sharedPreferences: SharedPrefer
   fun setPreferredNotificationMethod(method: NotificationDeliveryMethod) {
     SignalStore.settings.preferredNotificationMethod = method
     TextSecurePreferences.setPromptedOptimizeDoze(AppDependencies.application, false)
-    ApplicationContext.getInstance().updatePushNotificationServices()
+    ApplicationContext.getInstance(AppDependencies.application).updatePushNotificationServices()
     AppDependencies.resetNetwork(true)
     refresh()
   }
@@ -126,12 +134,7 @@ class NotificationsSettingsViewModel(private val sharedPreferences: SharedPrefer
   }
 
   fun initializeSentinelSocket(sentinelSocket: SentinelSocket) {
-    SignalStore.unifiedpush.apply {
-      airGapped = sentinelSocket is SentinelSocket.AirGapped
-      lastReceivedTime = 0
-      sentinelSocketUrl = (sentinelSocket as? SentinelSocket.WebServer)?.url
-      sentinelSocketVapid = sentinelSocket.vapid
-    }
+    SignalStore.unifiedpush.updateSentinelSocket(sentinelSocket)
   }
 
   fun setPlayServicesErrorCode(errorCode: Int?) {

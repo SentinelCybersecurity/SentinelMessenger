@@ -1,9 +1,10 @@
 package org.thoughtcrime.securesms.jobs
 
 import im.molly.unifiedpush.SentinelSocketRepository
-import im.molly.unifiedpush.SentinelSocketRepository.isLinked
 import im.molly.unifiedpush.UnifiedPushDistributor
 import im.molly.unifiedpush.UnifiedPushNotificationBuilder
+import im.molly.unifiedpush.model.LinkStatus
+import im.molly.unifiedpush.model.SentinelSocketDevice
 import im.molly.unifiedpush.model.RegistrationStatus
 import im.molly.unifiedpush.model.toRegistrationStatus
 import okhttp3.HttpUrl.Companion.toHttpUrlOrNull
@@ -23,6 +24,11 @@ import java.util.concurrent.TimeUnit
 /**
  * Handles UnifiedPush registration and ensures the SentinelSocket status is up-to-date.
  * Unregisters if the account is not registered or UnifiedPush is disabled.
+ *
+ * @param testPing Send a ping notification with the registration.
+ *   Used during first registration to a new SentinelSocket server.
+ * @param fromNewEndpoint Avoid registration cycle: if the Job is run from
+ *   the receiver "onNewEndpoint", it will not register to the distributor.
  */
 class UnifiedPushRefreshJob private constructor(
   private val testPing: Boolean,
@@ -54,14 +60,21 @@ class UnifiedPushRefreshJob private constructor(
 
     Log.d(TAG, "Current registration status: $currentStatus")
 
-    if (!hasAccount || !enabled) {
+    if (!hasAccount) {
+      Log.w(TAG, "User is not registered. Skipping.")
+      return
+    }
+
+    if (!enabled) {
       Log.d(TAG, "UnifiedPush is disabled.")
+      cleanupSentinelSocketDevice()
       return
     }
 
     try {
-      val newStatus = checkRegistrationStatus()
+      validateSentinelSocketDevice()
 
+      val newStatus = checkRegistrationStatus()
       if (currentStatus == newStatus) {
         Log.d(TAG, "Registration status unchanged.")
       } else {
@@ -100,15 +113,13 @@ class UnifiedPushRefreshJob private constructor(
     val airGapped = SignalStore.unifiedpush.airGapped
     val sentinelSocketUrl = SignalStore.unifiedpush.sentinelSocketUrl?.toHttpUrlOrNull()
     val lastReceivedTime = SignalStore.unifiedpush.lastReceivedTime
-    val vapid = SignalStore.unifiedpush.sentinelSocketVapid
+    val vapid = SignalStore.unifiedpush.vapidPublicKey
 
     Log.d(TAG, "Last notification received at: $lastReceivedTime")
 
-    SignalStore.unifiedpush.device?.let { device ->
-      if (!device.isLinked()) {
-        Log.w(TAG, "$device no longer linked, will be recreated.")
-        SignalStore.unifiedpush.device = null
-      }
+    if (vapid == null) {
+      Log.e(TAG, "Missing VAPID public key.")
+      return RegistrationStatus.PENDING
     }
 
     if (!fromNewEndpoint) {
@@ -126,9 +137,10 @@ class UnifiedPushRefreshJob private constructor(
     }
 
     val device = SignalStore.unifiedpush.device ?: try {
-      SentinelSocketRepository.createDevice().also { device ->
-        SignalStore.unifiedpush.device = device
-        Log.d(TAG, "Created new SentinelSocket device: $device")
+      SentinelSocketRepository.createDevice().also { newDevice ->
+        SignalStore.unifiedpush.device = newDevice
+        SignalStore.unifiedpush.vapidKeySynced = true
+        Log.d(TAG, "Created new SentinelSocket device: $newDevice")
       }
     } catch (e: DeviceLimitExceededException) {
       Log.e(TAG, "Device limit exceeded: ${e.max} total devices already.")
@@ -158,6 +170,62 @@ class UnifiedPushRefreshJob private constructor(
     Log.d(TAG, "Registration result: $result")
 
     return result.toRegistrationStatus()
+  }
+
+  @Throws(IOException::class)
+  private fun validateSentinelSocketDevice() {
+    val device = SignalStore.unifiedpush.device ?: return
+    val vapidSynced = SignalStore.unifiedpush.vapidKeySynced
+
+    when (SentinelSocketRepository.getDeviceStatus(device)) {
+      LinkStatus.LINKED -> {
+        if (!vapidSynced) {
+          Log.w(TAG, "VAPID key mismatch, will remove previous linked $device.")
+          removeAndClearDevice(device)
+        }
+      }
+
+      LinkStatus.NOT_LINKED -> {
+        Log.w(TAG, "$device no longer linked, will be recreated.")
+        clearDevice()
+      }
+
+      LinkStatus.UNKNOWN -> {
+        if (!vapidSynced) {
+          throw IOException("VAPID key mismatch, but cannot determine $device link status.")
+        }
+        return // Optimistically assume the device is linked
+      }
+    }
+  }
+
+  @Throws(IOException::class)
+  private fun cleanupSentinelSocketDevice() {
+    if (SignalStore.unifiedpush.airGapped) {
+      Log.d(TAG, "SentinelSocket is air-gapped, cleanup skipped.")
+      return
+    }
+
+    val device = SignalStore.unifiedpush.device ?: return
+    Log.d(TAG, "Cleaning up non-air-gapped $device...")
+
+    when (SentinelSocketRepository.getDeviceStatus(device)) {
+      LinkStatus.LINKED -> removeAndClearDevice(device)
+      LinkStatus.NOT_LINKED -> clearDevice()
+      LinkStatus.UNKNOWN -> {
+        throw IOException("Cannot determine $device link status during cleanup.")
+      }
+    }
+  }
+
+  @Throws(IOException::class)
+  private fun removeAndClearDevice(device: SentinelSocketDevice) {
+    SentinelSocketRepository.removeDevice(device)
+    clearDevice()
+  }
+
+  private fun clearDevice() {
+    SignalStore.unifiedpush.device = null
   }
 
   override fun onFailure() = Unit

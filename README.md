@@ -80,6 +80,24 @@ This multi-layered audit protocol represents Sentinel's unwavering commitment to
 
 ---
 
+# SentinelMessenger Team Assurance
+
+This message explains the project’s security-first approach and the practices we follow to mitigate vulnerabilities and remove doubts about the code published in this repository.
+
+The robustness of SentinelMessenger is not derived from the number of new features added but from a rigorous code control and release policy that prioritizes security over feature velocity.
+
+The project lead is presented as a recognized expert in cybersecurity with a track record of designing encrypted communication systems that adhere to high security standards and with ongoing work on Zero Knowledge Proof Encryption for cloud services; this expertise informs every audit and verification step we perform.
+
+SentinelMessenger intentionally emphasizes a minimal contributor model as a deliberate risk mitigation strategy to reduce the likelihood of insider threats, logic bombs, trusting trust attacks and undocumented backdoors that can be introduced inadvertently or under external pressure when many contributors operate by mutual trust. Our release policy requires that every change be subject to automated and manual verification before integration, that diffs against upstream components be reviewed in detail, and that build artifacts be reproducible and accompanied by metadata and hashes to enable independent verification.
+
+The audit process inspects secrets and configuration for hardcoded credentials, performs dependency analysis for known vulnerabilities, reviews key lifecycle management and backup serialization to ensure keys are stored and restored only via secure keystores and encrypted formats, validates network code for correct TLS configuration, certificate pinning and strict hostname verification, checks for permissive TrustManager implementations, verifies the use of cryptographically secure random number generation, searches for dynamic code loading and unverified native binaries, audits logging to prevent sensitive data leakage, and examines Android manifests for exported components and unsafe permissions.
+
+Automated SAST and DAST scans, history scans for leaked secrets, dependency vulnerability scans and fuzzing of parsers and network protocols are combined with a meticulous manual, line‑by‑line review of critical modules including key management, networking, cryptographic wrappers and native interfaces. The manual review is the core of our assurance model and can require weeks or months to complete because only exhaustive human inspection can reliably detect subtle logical patterns or intentionally concealed code paths that automated tools miss. Releases are published only after all automated checks and manual reviews have passed and the results have been documented; release artifacts are published with verifiable hashes and build instructions so third parties can reproduce and validate the binaries.
+
+This approach focuses on preventing and detecting insider-driven vulnerabilities and on ensuring that every release reflects the outcome of a deliberate, security‑centric process rather than a race to add features.
+
+---
+
 ## Use Cases
 
 - Diplomatic and institutional personnel operating in high-risk environments  

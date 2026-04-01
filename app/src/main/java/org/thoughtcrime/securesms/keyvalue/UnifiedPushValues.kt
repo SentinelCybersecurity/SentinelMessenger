@@ -15,14 +15,15 @@ class UnifiedPushValues(store: KeyValueStore) : SignalStoreValues(store) {
     private const val SENTINELSOCKET_AIR_GAPPED = "sentinelsocket.airGapped"
     private const val SENTINELSOCKET_URL = "sentinelsocket.url"
     private const val SENTINELSOCKET_VAPID = "sentinelsocket.vapid"
+    private const val SENTINELSOCKET_VAPID_SYNCED = "sentinelsocket.vapid.synced"
     private const val UNIFIEDPUSH_ENABLED = "up.enabled"
     private const val UNIFIEDPUSH_ENDPOINT = "up.endpoint"
     private const val UNIFIEDPUSH_LAST_RECEIVED_TIME = "up.lastRecvTime"
   }
 
-  override fun onFirstEverAppLaunch() = Unit
+  public override fun onFirstEverAppLaunch() = Unit
 
-  override fun getKeysToIncludeInBackup() = emptyList<String>()
+  public override fun getKeysToIncludeInBackup() = emptyList<String>()
 
   @get:JvmName("isEnabled")
   var enabled: Boolean by booleanValue(UNIFIEDPUSH_ENABLED, false)
@@ -56,7 +57,9 @@ class UnifiedPushValues(store: KeyValueStore) : SignalStoreValues(store) {
 
   var sentinelSocketUrl: String? by stringValue(SENTINELSOCKET_URL, null)
 
-  var sentinelSocketVapid: String? by stringValue(SENTINELSOCKET_VAPID, null)
+  var vapidPublicKey:  String? by stringValue(SENTINELSOCKET_VAPID, null)
+
+  var vapidKeySynced: Boolean by booleanValue(SENTINELSOCKET_VAPID_SYNCED, true)
 
   var lastReceivedTime: Long by longValue(UNIFIEDPUSH_LAST_RECEIVED_TIME, 0)
 

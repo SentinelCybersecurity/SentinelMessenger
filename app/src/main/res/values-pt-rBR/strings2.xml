@@ -16,7 +16,7 @@
   <string name="preferences__automatic_lockdown">Bloqueio automático</string>
   <string name="preferences__protect_sentinel_database_with_a_passphrase">Proteger o banco de dados do Sentinel com uma frase de recuperação</string>
   <string name="preferences__passphrase_lock">Criptografia de banco de dados</string>
-  <string name="arrays__on_inactivity_timeout">Se você ficar um certo tempo sem desbloquear seu despositivo</string>
+  <string name="arrays__on_inactivity_timeout">Se você ficar um certo tempo sem desbloquear seu dispositivo</string>
   <string name="BlockUnblockDialog_block_and_delete">Bloquear e excluir</string>
   <string name="DonateMegaphone_sentinel_is_free_software">Sentinel é um software livre</string>
   <string name="prompt_passphrase_activity__sentinel_is_locked">Sentinel está bloqueado</string>
