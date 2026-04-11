@@ -4,7 +4,7 @@
 It is part of the broader **SentinelCybersecurity** initiative — an open-source effort dedicated to building tools that strengthen digital sovereignty and independent cybersecurity infrastructures.
 
 **Advanced encrypted communication platform for privacy, resilience, and digital sovereignty.**  
-Derived from [GrapheneMessenger](https://github.com/Andrea-Bruno/GrapheneMessenger), *SentinelMessenger* is a secure messaging system designed for high-risk environments, institutional actors, and individuals who demand uncompromising digital privacy.
+Derived from [GrapheneMessenger](https://github.com/Graphene-Lab/GrapheneMessenger), *SentinelMessenger* is a secure messaging system designed for high-risk environments, institutional actors, and individuals who demand uncompromising digital privacy.
 
 ### **Sentinel Update Strategy and Security Management**
 Sentinel employs a deliberate and conservative update strategy, inspired by stability-focused Linux distributions like **Debian Stable** and the broader principle of **"Conservative Software"** or **"Delayed and Controlled Patching."**
@@ -44,7 +44,7 @@ Sentinel's update strategy is a deliberate design choice to prioritize robust an
 
 ## Architecture and Security
 
-![Sentinel](app/src/main/res/drawable-mdpi/welcome.webp)
+![Sentinel](feature/registration/src/main/res/drawable-mdpi/welcome.webp)
 
 The reliability of *SentinelMessenger* is built upon a layered architecture that applies advanced cybersecurity principles at every level of operation.  
 Each component is designed to minimize attack surfaces, protect data confidentiality, and maintain operational integrity even under hostile conditions.
@@ -123,6 +123,6 @@ cd SentinelMessenger
 
 ## Credits & Licensing
 
-*SentinelMessenger* is a secure communication project developed by **SentinelCybersecurity**, based on the open-source foundation of [GrapheneMessenger](https://github.com/Andrea-Bruno/GrapheneMessenger).  
+*SentinelMessenger* is a secure communication project developed by **SentinelCybersecurity**, based on the open-source foundation of [GrapheneMessenger](https://github.com/Graphene-Lab/GrapheneMessenger).  
 All source code is released under the **GPLv3 License**, ensuring transparency, auditability, and freedom of use consistent with open cybersecurity principles.
 
