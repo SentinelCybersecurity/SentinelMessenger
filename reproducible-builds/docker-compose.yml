@@ -3,7 +3,7 @@ services:
     image: reproducible-sentinel
     build:
       context: ..
-    command: :app:assembleRelease :app:bundleRelease
+    command: assemble
     volumes:
       - ./certs:/sentinel/app/certs:ro
       - ./outputs:/sentinel/app/build/outputs
